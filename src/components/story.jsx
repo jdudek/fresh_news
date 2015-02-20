@@ -1,14 +1,16 @@
 var React = require('react')
+var Bootstrap = require('react-bootstrap');
 
 module.exports = React.createClass({
   displayName: 'Story',
 
   render: function () {
     return (
-      <h4>
-        <a href={this.props.url}>{this.props.title}</a>
-        <small>{this.props.url}</small>
-      </h4>
+      <Bootstrap.ListGroupItem href={this.props.url} header={this.props.title}>
+        <Bootstrap.Badge>{this.props.score}</Bootstrap.Badge>
+        {' '}
+        {this.props.url}
+      </Bootstrap.ListGroupItem>
     );
   }
 });

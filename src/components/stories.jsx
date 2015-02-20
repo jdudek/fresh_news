@@ -1,6 +1,7 @@
 var React = require('react');
-var Story = require('./story');
 var jQuery = require('jquery');
+var Story = require('./story');
+var Bootstrap = require('react-bootstrap');
 
 module.exports = React.createClass({
   displayName: 'Stories',
@@ -11,11 +12,11 @@ module.exports = React.createClass({
 
   render: function () {
     return (
-      <div>
+      <Bootstrap.ListGroup>
         {this.state.stories.map(function (story) {
           return <Story {...story} key={story.id}></Story>;
         })}
-      </div>
+      </Bootstrap.ListGroup>
     )
   },
 
