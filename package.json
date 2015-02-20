@@ -4,8 +4,11 @@
   "description": "FreshNews app",
   "main": "src/app.js",
   "scripts": {
-    "start": "http-server dist --silent & watchify -o dist/app.js --verbose --debug . --extension .jsx",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "http-server dist --silent",
+    "watch": "npm start & watchify . -o dist/app.js --verbose --debug --extension .jsx",
+    "build": "browserify . -o dist/app.js --debug --extension .jsx",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm run build"
   },
   "author": "Jan Dudek <jd@jandudek.com> (http://github.com/jdudek)",
   "license": "ISC",
