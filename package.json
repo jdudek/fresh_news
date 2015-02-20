@@ -1,0 +1,17 @@
+{
+  "name": "fresh_news",
+  "version": "1.0.0",
+  "description": "FreshNews app",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "http-server dist & watchify -o dist/app.js --verbose --debug .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jan Dudek <jd@jandudek.com> (http://github.com/jdudek)",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^8.1.3",
+    "http-server": "^0.7.4",
+    "watchify": "^2.3.0"
+  }
+}
