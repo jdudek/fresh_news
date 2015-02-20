@@ -4,7 +4,7 @@
   "description": "FreshNews app",
   "main": "src/app.js",
   "scripts": {
-    "start": "http-server dist & watchify -o dist/app.js --verbose --debug . --extension .jsx",
+    "start": "http-server dist --silent & watchify -o dist/app.js --verbose --debug . --extension .jsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jan Dudek <jd@jandudek.com> (http://github.com/jdudek)",
