@@ -1,6 +1,9 @@
 var React = require('react');
-var App = require('./components/app');
+var Router = require('react-router');
+var Routes = require('./routes');
 
 window.React = React;
 
-React.render(React.createElement(App), document.body);
+Router.run(Routes, function (Handler) {
+  React.render(React.createElement(Handler), document.body);
+});

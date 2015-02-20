@@ -21,7 +21,7 @@ module.exports = React.createClass({
   },
 
   componentDidMount: function () {
-    jQuery.get('http://localhost:9292/stories').done(function (data) {
+    jQuery.get('http://localhost:9292' + this.props.url).done(function (data) {
       if (this.isMounted()) {
         this.setState({ stories: data });
       }
