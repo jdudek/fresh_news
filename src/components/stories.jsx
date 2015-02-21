@@ -3,6 +3,8 @@ var jQuery = require('jquery');
 var Story = require('./story');
 var Bootstrap = require('react-bootstrap');
 
+var API_HOST = 'https://fierce-gorge-1132.herokuapp.com';
+
 module.exports = React.createClass({
   displayName: 'Stories',
 
@@ -21,7 +23,7 @@ module.exports = React.createClass({
   },
 
   componentDidMount: function () {
-    jQuery.get('http://localhost:9292' + this.props.url).done(function (data) {
+    jQuery.get(API_HOST + this.props.url).done(function (data) {
       if (this.isMounted()) {
         this.setState({ stories: data });
       }
